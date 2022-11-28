@@ -261,6 +261,7 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.32.1
 
 ```bash
 route add -net 192.192.5.0 netmask 255.255.255.252 gw 192.192.8.2
+route add -net 192.192.0.0 netmask 255.255.252.0 gw 192.192.64.1
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.64.1
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.8.2
 ```
@@ -269,4 +270,41 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.8.2
 
 ```bash
 route add -net 192.192.16.0 netmask 255.255.255.192 gw 192.192.8.1
+route add -net 192.192.192.0 netmask 255.255.254.0 gw 192.192.160.2
+route add -net 192.192.136.0 netmask 255.255.255.128 gw 192.192.144.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.144.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.8.1
+```
+
+* The Magical
+
+```bash
+route add -net 192.192.5.0 netmask 255.255.255.252 gw 192.192.160.1
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.160.1
+```
+
+* The Instrument
+
+```bash
+route add -net 192.192.5.0 netmask 255.255.255.252 gw 192.192.144.1
+route add -net 192.192.138.0 netmask 255.255.255.128 gw 192.192.138.2
+route add -net 192.192.136.128 netmask 255.255.255.128 gw 192.192.138.2
+route add -net 192.192.128.0 netmask 255.255.254.0 gw 192.192.132.2
+oute add -net 192.192.130.0 netmask 255.255.255.0 gw 192.192.132.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.144.1
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.132.2
+```
+
+* The Refound
+
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.138.2
+route add -net 192.192.136.0 netmask 255.255.255.128 gw 192.192.138.1
+```
+
+* The Queen
+
+```bash
+route add -net 192.192.128.0 netmask 255.255.254.0 gw 192.192.130.1
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.130.1
 ```
