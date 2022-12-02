@@ -129,6 +129,7 @@ Node                        | Alokasi      |  Netmask   |
 * The Refound
 
 ```bash
+192.192.11.0/25 via 192.192.11.218
 0.0.0.0/0 via 192.192.11.218
 ```
 
@@ -136,13 +137,15 @@ Node                        | Alokasi      |  Netmask   |
 
 ```bash
 0.0.0.0/0 via 192.192.11.221
-0.0.0.0/0 via 192.192.9.2
+192.192.11.224/30 via 192.192.9.2
 ```
 
 * The Queen
 
 ```bash
+192.192.4.0/23 via 192.192.9.1
 0.0.0.0/0 via 192.192.9.1
+
 ```
 
 ## CIDR - GNS3
@@ -274,6 +277,8 @@ route add -net 192.192.192.0 netmask 255.255.254.0 gw 192.192.160.2
 route add -net 192.192.136.0 netmask 255.255.255.128 gw 192.192.144.2
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.144.2
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.8.1
+
+route add default gw 192.168.122.1
 ```
 
 * The Magical
@@ -290,7 +295,7 @@ route add -net 192.192.5.0 netmask 255.255.255.252 gw 192.192.144.1
 route add -net 192.192.138.0 netmask 255.255.255.128 gw 192.192.138.2
 route add -net 192.192.136.128 netmask 255.255.255.128 gw 192.192.138.2
 route add -net 192.192.128.0 netmask 255.255.254.0 gw 192.192.132.2
-oute add -net 192.192.130.0 netmask 255.255.255.0 gw 192.192.132.2
+route add -net 192.192.130.0 netmask 255.255.255.0 gw 192.192.132.2
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.144.1
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.132.2
 ```
@@ -298,8 +303,15 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.132.2
 * The Refound
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.138.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.138.1
 route add -net 192.192.136.0 netmask 255.255.255.128 gw 192.192.138.1
+```
+
+* The Firefist
+
+```bash
+route add -net 192.192.131.0 netmask 255.255.255.252 gw 192.192.130.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.192.132.1
 ```
 
 * The Queen
